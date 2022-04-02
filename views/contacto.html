@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/viewsa/contacto.css">
+</head>
+<body class="grilla_contact">
+    <header>
+        <nav class="navbar flex-row container">
+            <picture class="logo">
+                <a href="./index.html"> <img src="../img/logo.png" alt="logo de la empresa chacra vieja" class="logo_size"></a>
+            </picture>
+            <ul class="menu flex-row">
+                 <li class="menu__item">
+                     <a href="../index.html" class="menu__link"> Inicio</a>
+                 </li> 
+                 <li class="menu__item">
+                     <a href="./about.html" class="menu__link"> About</a>
+                 </li>
+                 <li class="menu__item">
+                     <a href="./productos.html" class="menu__link"> Productos</a>
+                         <ul class="flex-column sub-menu">
+                             <li>
+                                 <a href="./product_manzana.html" class="sub-menu__link">Manzanas</a>
+                             </li>
+                             <li>
+                                 <a href="./product_pera.html" class="sub-menu__link">Peras</a>
+                             </li>
+                             <li>
+                                 <a href="./product_durazno.html" class="sub-menu__link">Duraznos</a>
+                             </li>
+                         </ul>
+                     </a>
+                 </li>
+                 <li class="menu__item">
+                      <a href="./contacto.html" class="menu__link"> Contacto</a>
+                 </li>
+            </ul>
+        </nav>
+    </header> 
+    <section class="flex-column"> 
+        <h1 class="encabezado">¿Te interesa trabajar con nosotros?</h1>
+        <h2 class="sub_encabezado">Completa los siguientes casilleros con tus datos y tu consulta, y te reponderemos en la brevedad.</h2>
+    </section>
+    <main class="flex-row flex-wrap ubicacion centrar_contact container ">
+        <section class="flex-column orden">
+            <div class="flex-row ubicacion espacio">
+                <img src="../img/telefono.png" alt="simbolo telefono" class="simbolo"> 
+                <h2 class="texto">Numero de contacto: 123-4567890 </h2> 
+            </div>
+            <div class="flex-row ubicacion espacio">
+                <img src="../img/mail.png" alt="simbolo e-mail" class="simbolo">
+                <h2 class="texto">Mail de contacto: maildecontacto@gmail.com</h2>
+            </div>
+        </section>
+        <section class="orden tamaño">
+            <form action="" method="post" enctype="">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" class="orden altura_casilleros"> <br>
+                <input type="email" name="email" id="email" placeholder="Email" class="orden altura_casilleros"> <br> 
+                <input type="number" name="telefono" id="telefono" placeholder="Numero de telefono" class="orden altura_casilleros"> <br>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Ingrese aqui su mensaje:" class="orden"></textarea> <br>
+                <button type="submit">Enviar datos</button>
+                <button type="reset">Borrar datos</button>
+            </form> <br>
+        </section>
+</main>
+
+    <footer class="footer">
+        <div class="flex-column container parrafo centrar">
+            <p>
+                maildecontacto@gmail.com
+            </p>
+            <p>
+                123-4567890
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>

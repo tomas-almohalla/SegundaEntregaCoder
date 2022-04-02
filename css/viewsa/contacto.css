@@ -1,0 +1,76 @@
+@import url(../parcials/general.css);
+
+.encabezado{
+    text-align: center;
+    font-size: 6em;
+    justify-content: space-around;
+    text-decoration: underline;
+}
+
+.espacio{
+    gap: 5em;
+}
+
+.sub_encabezado{
+text-align: center;
+font-size: 4em;
+justify-content: space-around;
+}
+
+.simbolo{
+    width: 10em;
+    height: 10em;
+}
+
+.info{
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grilla_info{
+    display: grid;
+
+}
+
+.ubicacion{
+    align-items: center;
+}
+
+.grilla_contact{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+}
+
+.centrar_contact{
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+
+.tamaño{
+    min-width: 380px ;
+    max-width: 1920px;
+}
+
+.orden{
+    flex-basis: 48%;
+    width: 100%;
+    /* font-size: var(--text_xs); */
+}
+
+.altura_casilleros{
+    height: 3em;
+}
+
+@media screen and (max-width: 1273px){
+    .orden{
+        flex-basis: 100%;
+    }
+    .ubicacion{
+        
+        align-items: center;
+    }
+}

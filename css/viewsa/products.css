@@ -1,0 +1,35 @@
+@import url(../parcials/general.css);
+
+main div{
+    border: solid var(--cr_transparent) 3px;
+    font-size: var(--text_sml);
+    transition: font-size 1s ease-in-out;
+}
+
+main div a img{
+    width: 30em;
+}
+
+.ubicar{
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ancho_max{
+    max-width: 100%;
+}
+
+.texto_link{
+    font-size: var(--text_lm);
+}
+
+.color_fondo{
+    background-color: #06882785;
+}
+/*Transiciones*/
+
+main div:hover{
+border: solid var(--cr_scdary) 3px;
+transition: border 1s ease-in-out;
+}
+
