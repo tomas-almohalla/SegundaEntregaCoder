@@ -1,29 +1,20 @@
 /*Imports*/
 @import url("https://fonts.googleapis.com/css2?family=Arimo&family=Cinzel:wght@400;500;600&display=swap");
-/*Reset*/
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+.gap-xlarge {
+  gap: 10em; }
 
-html {
-  font-size: 62.5%;
-  font-family: var(--font_menu);
-  color: var(--cr_menu); }
+.gap-large {
+  gap: 7em; }
 
-body {
-  width: 100%;
-  min-height: 100vh; }
+.gap-medium {
+  gap: 4em; }
 
-.grilla {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
-  max-width: 100%; }
+.gap-small {
+  gap: 3em; }
 
-/*VARIABLES*/
+.gap-xsmall {
+  gap: 1em; }
+
 :root {
   --cr_ppal: #8cdb6dc5;
   --cr_transparent: #8cdb6d00;
@@ -38,6 +29,29 @@ body {
   --text_md: 2em;
   --text_xs: 1.5em;
   --text_sml: 1em; }
+
+/*Reset*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: "arimo";
+  color: #000000; }
+
+body {
+  width: 100%;
+  min-height: 100vh; }
+
+.grilla {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  max-width: 100%; }
 
 /*HELPERS*/
 .flex-row {
@@ -61,13 +75,13 @@ body {
 
 /*header*/
 header {
-  background-color: var(--cr_ppal);
+  background-color: #8cdb6dc5;
   width: 100%; }
   header ul {
     list-style-type: none;
     margin-right: 10em; }
   header a {
-    color: var(--cr_menu);
+    color: #000000;
     text-decoration: none;
     display: inline-block; }
   header .logo {
@@ -83,33 +97,40 @@ header {
     flex-wrap: wrap; }
   header .menu {
     flex-basis: 70%;
-    justify-content: space-between; }
-  header .menu__item {
-    border-bottom: 2px solid var(--cr_transparent);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    flex-wrap: nowrap; }
+  header .menu__item, header .menu__item__active {
+    border-bottom: 2px solid #8cdb6d00;
     transition: transform 1s; }
-  header .menu .menu__item .menu__link {
-    font-size: var(--text_md);
+  header .menu__item__active {
+    border-bottom: 2px solid #ffffff; }
+  header .menu .menu__item .menu__link, header .menu .menu__item__active .menu__link {
+    font-size: 2em;
     padding: 1rem; }
-  header .menu__item:hover {
-    border-bottom: 2px solid var(--cr_scdary);
+  header .menu__item:hover, header .menu__item__active:hover {
+    border-bottom: 2px solid #ffffff;
     transition: border-color .3s ease-in-out; }
   header .sub-menu {
     display: none;
     padding: 1rem;
-    border-bottom: 2px solid var(--cr_transparent);
-    font-size: var(--text_md); }
+    border-bottom: 2px solid #8cdb6d00;
+    font-size: 2em; }
   header .sub-menu__link:hover {
-    background-color: var(--cr_ppal);
+    background-color: #8cdb6dc5;
     transition: background-color .3s ease-in-out;
-    border-bottom: solid var(--cr_scdary) 1px; }
-  header .menu__item:hover .sub-menu {
+    border-bottom: solid #ffffff 1px; }
+  header .menu__item:hover .sub-menu, header .menu__item__active:hover .sub-menu {
     display: flex;
     flex-direction: column;
     gap: .3em;
     position: absolute; }
 
 footer {
-  background-color: var(--cr_ppal);
+  background-color: #8cdb6dc5;
   min-height: 8.5em;
   padding: 0 2rem; }
   footer .alineado {
@@ -119,7 +140,7 @@ footer {
     /* display: inline-block; */
     width: 100%;
     height: 100%;
-    font-size: var(--text_md); }
+    font-size: 2em; }
 
 @media screen and (max-width: 990px) {
   .logo {

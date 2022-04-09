@@ -1,0 +1,42 @@
+$cr_ppal: #8cdb6dc5;
+$cr_transparent: #8cdb6d00;
+$cr_scdary: #ffffff;
+$cr_menu: #000000;
+$font_slogan: "cinzel";
+$font_menu: "arimo";
+$text_xlg: 10em;
+$text_lg: 7em;
+$text_xm: 2.6em;
+$text_lm: 2.5em;
+$text_md: 2em;
+$text_xs: 1.5em;
+$text_sml: 1em;
+
+$gap: (
+  xlarge: 10em,
+  large: 7em,
+  medium: 4em,
+  small: 3em,
+  xsmall: 1em
+);
+@each $var, $val in $gap{
+    .gap-#{$var} {
+        gap: #{$val};
+    }
+}
+
+:root{
+--cr_ppal: #8cdb6dc5;
+--cr_transparent: #8cdb6d00;
+--cr_scdary: #ffffff;
+--cr_menu: #000000;
+--font_slogan: "cinzel";
+--font_menu: "arimo";
+--text_xlg: 10em;
+--text_lg: 7em;
+--text_xm: 2.6em;
+--text_lm: 2.5em;
+--text_md: 2em;
+--text_xs: 1.5em;
+--text_sml: 1em;
+}

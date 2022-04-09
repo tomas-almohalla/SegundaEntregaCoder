@@ -15,8 +15,8 @@
 /*GLOBALS*/
 html{
     font-size: 62.5%;
-    font-family: var(--font_menu);
-    color: var(--cr_menu);
+    font-family: var($font_menu);
+    color: var($cr_menu);
 }
 
 body{
@@ -35,19 +35,33 @@ body{
 
 /*VARIABLES*/
 :root {
-    --cr_ppal: #8cdb6dc5;
-    --cr_transparent: #8cdb6d00;
-    --cr_scdary: #ffffff;
-    --cr_menu: #000000;
-    --font_slogan: "cinzel";
-    --font_menu: "arimo";
-    --text_xlg: 10em;
-    --text_lg: 7em;
-    --text_xm: 2.6em;
-    --text_lm: 2.5em;
-    --text_md: 2em;
-    --text_xs: 1.5em;
-    --text_sml: 1em;
+    $cr_ppal: #8cdb6dc5;
+    $cr_transparent: #8cdb6d00;
+    $cr_scdary: #ffffff;
+    $cr_menu: #000000;
+    $font_slogan: "cinzel";
+    $font_menu: "arimo";
+    $text_xlg: 10em;
+    $text_lg: 7em;
+    $text_xm: 2.6em;
+    $text_lm: 2.5em;
+    $text_md: 2em;
+    $text_xs: 1.5em;
+   $text_sml: 1em;
+
+   --cr_ppal: #8cdb6dc5;
+   --cr_transparent: #8cdb6d00;
+   --cr_scdary: #ffffff;
+  --cr_menu: #000000;
+   --font_slogan: "cinzel";
+   --font_menu: "arimo";
+  --text_xlg: 10em;
+  --text_lg: 7em;
+  --text_xm: 2.6em;
+  --text_lm: 2.5em;
+   $text_md: 2em;
+  --text_xs: 1.5em;
+  --text_sml: 1em;
 }
 
 
@@ -81,7 +95,7 @@ body{
 /*HEADER*/
 
 header{
-    background-color: var(--cr_ppal);
+    background-color: var($cr_ppal);
     width: 100%;
 
 }
@@ -100,7 +114,7 @@ ul{
 }
 
 a { 
-    color: var(--cr_menu);
+    color: var($cr_menu);
     text-decoration: none;
     display: inline-block;
 }
@@ -119,7 +133,7 @@ header .menu{
 }
 
 header .menu__item{
-    border-bottom: 2px solid var(--cr_transparent);
+    border-bottom: 2px solid var($cr_transparent);
     transition: transform 1s;
 
 }
@@ -127,23 +141,23 @@ header .menu__item{
 
 
 header .menu .menu__item .menu__link{
-    font-size: var(--text_md);
+    font-size: var($text_md);
     padding: 1rem;
 }
 
 .sub-menu{
     display: none;
     padding: 1rem;
-    border-bottom: 2px solid var(--cr_transparent);
-    font-size: var(--text_md);
+    border-bottom: 2px solid var($cr_transparent);
+    font-size: var($text_md);
 }
 
 
 
 .sub-menu__link:hover{
-    background-color: var(--cr_ppal);
+    background-color: var($cr_ppal);
     transition: background-color .3s ease-in-out;
-    border-bottom: solid var(--cr_scdary) 1px;
+    border-bottom: solid var($cr_scdary) 1px;
   
 }
 
@@ -158,7 +172,7 @@ header .menu .menu__item .menu__link{
 /*FOOTER*/
 
 footer{
-    background-color: var(--cr_ppal);
+    background-color: var($cr_ppal);
     min-height: 8.5em;
     padding: 0 2rem;
 }
@@ -173,13 +187,13 @@ footer .parrafo{
     /* display: inline-block; */
     width: 100%;
     height: 100%;
-    font-size: var(--text_md);
+    font-size: var($text_md);
     
 }
 
 /*Transiciones*/
 header .menu__item:hover{
-border-bottom: 2px solid var(--cr_scdary);
+border-bottom: 2px solid var($cr_scdary);
 transition: border-color .3s ease-in-out;
 
 }

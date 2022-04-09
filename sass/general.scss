@@ -1,5 +1,7 @@
 /*Imports*/
 @import url('https://fonts.googleapis.com/css2?family=Arimo&family=Cinzel:wght@400;500;600&display=swap');
+@import './misc/variables';
+@import './mixins/mixings';
 
 /*Reset*/
 *,
@@ -12,8 +14,8 @@
 
 html{
     font-size: 62.5%;
-    font-family: var(--font_menu);
-    color: var(--cr_menu);
+    font-family: $font_menu;
+    color: $cr_menu;
 }
 
 body{
@@ -28,25 +30,6 @@ body{
     grid-template-columns: 1fr;
     max-width: 100%;
 }
-
-
-/*VARIABLES*/
-:root {
-    --cr_ppal: #8cdb6dc5;
-    --cr_transparent: #8cdb6d00;
-    --cr_scdary: #ffffff;
-    --cr_menu: #000000;
-    --font_slogan: "cinzel";
-    --font_menu: "arimo";
-    --text_xlg: 10em;
-    --text_lg: 7em;
-    --text_xm: 2.6em;
-    --text_lm: 2.5em;
-    --text_md: 2em;
-    --text_xs: 1.5em;
-    --text_sml: 1em;
-}
-
 
 
 /*HELPERS*/
@@ -80,7 +63,7 @@ body{
 
 
 header{
-    background-color: var(--cr_ppal);
+    background-color: $cr_ppal;
     width: 100%;
 
     ul{
@@ -89,7 +72,7 @@ header{
     }
     
     a { 
-        color: var(--cr_menu);
+        color: $cr_menu;
         text-decoration: none;
         display: inline-block;
     }
@@ -112,38 +95,42 @@ header{
 
     .menu{
         flex-basis: 70%;
-        justify-content: space-between;
+        @include flex($justify: space-between, $align: center);
     }
 
     .menu__item{
-        border-bottom: 2px solid var(--cr_transparent);
+        border-bottom: 2px solid $cr_transparent;
         transition: transform 1s;
     
     }
+    .menu__item__active{
+        @extend .menu__item;
+        border-bottom: 2px solid $cr_scdary;
+    }
 
     .menu .menu__item .menu__link{
-        font-size: var(--text_md);
+        font-size: $text_md;
         padding: 1rem;
     }
 
     .menu__item:hover{
-        border-bottom: 2px solid var(--cr_scdary);
+        border-bottom: 2px solid $cr_scdary;
         transition: border-color .3s ease-in-out;
 
     }
     .sub-menu{
         display: none;
         padding: 1rem;
-        border-bottom: 2px solid var(--cr_transparent);
-        font-size: var(--text_md);
+        border-bottom: 2px solid $cr_transparent;
+        font-size: $text_md;
     }
     
     
     
     .sub-menu__link:hover{
-        background-color: var(--cr_ppal);
+        background-color: $cr_ppal;
         transition: background-color .3s ease-in-out;
-        border-bottom: solid var(--cr_scdary) 1px;
+        border-bottom: solid $cr_scdary 1px;
       
     }
     
@@ -160,7 +147,7 @@ header{
 
 
 footer{
-    background-color: var(--cr_ppal);
+    background-color: $cr_ppal;
     min-height: 8.5em;
     padding: 0 2rem;
     
@@ -172,7 +159,7 @@ footer{
         /* display: inline-block; */
         width: 100%;
         height: 100%;
-        font-size: var(--text_md);
+        font-size: $text_md;
         
     }
 }

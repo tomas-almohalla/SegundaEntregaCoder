@@ -1,4 +1,4 @@
-@import url(../parcials/general.css);
+@import url(../parcials/general_scss.css);
 
 .encabezado{
     text-align: center;
@@ -58,7 +58,7 @@ justify-content: space-around;
 .orden{
     flex-basis: 48%;
     width: 100%;
-    /* font-size: var(--text_xs); */
+    /* font-size: var($text_xs); */
 }
 
 .altura_casilleros{

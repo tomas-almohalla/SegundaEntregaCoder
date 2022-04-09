@@ -1,4 +1,4 @@
-@import url(../parcials/general.css);
+@import url(../parcials/general_scss.css);
 
 body{
     min-height: 100vh;
@@ -29,7 +29,7 @@ body{
 .parrafo_descrip{
     flex-basis: 40%;
     min-width: 300px;
-    font-size: var(--text_md);
+    font-size: var($text_md);
     padding: 10px;
     margin: 10px;
     border: solid 3px black;
@@ -75,7 +75,7 @@ body{
     }
     .parrafo_descrip{
         flex-basis: 100%;
-        font-size: var(--text_md);
+        font-size: var($text_md);
     }
     .imagen_about{
         flex-basis: 100%;

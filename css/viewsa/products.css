@@ -1,7 +1,7 @@
-@import url(../parcials/general.css);
+@import url(../parcials/general_scss.css);
 
 main div{
-    border: solid var(--cr_transparent) 3px;
+    border: solid var($cr_transparent) 3px;
     font-size: var(--text_sml);
     transition: font-size 1s ease-in-out;
 }
@@ -20,7 +20,7 @@ main div a img{
 }
 
 .texto_link{
-    font-size: var(--text_lm);
+    font-size: var($text_lm);
 }
 
 .color_fondo{
@@ -29,7 +29,7 @@ main div a img{
 /*Transiciones*/
 
 main div:hover{
-border: solid var(--cr_scdary) 3px;
+border: solid var($cr_scdary) 3px;
 transition: border 1s ease-in-out;
 }
 
